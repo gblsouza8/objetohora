@@ -1,6 +1,7 @@
 package objetohora;
 
 public class Hora {
+    // declara as variaveis de instancia
     private int hora;
     private int minuto;
     private int segundo;
@@ -8,25 +9,31 @@ public class Hora {
 
     public void setHora(int hora, int minuto, int segundo)
     {
+        // valida a hora
         if(hora >= 24 || hora < 0)
         {
-            throw new IllegalArgumentException("Hora inválida...");
+            throw new IllegalArgumentException("Hora inválida, valores não serão alterados.");
         }
 
+        // se validado, muda o valor da variavel de instancia
         this.hora = hora;
 
+        // valida os minutos
         if(minuto >= 60 || minuto < 0)
         {
-            throw new IllegalArgumentException("Minuto inválido...");
+            throw new IllegalArgumentException("Minuto inválido, minutos e segundos não serão alterados.");
         }
 
+        // se validado, muda o valor da variavel de instancia
         this.minuto = minuto;
 
+        // valida os segundos
         if(segundo >= 60 || segundo < 0)
         {
-            throw new IllegalArgumentException("Segundo inválido...");
+            throw new IllegalArgumentException("Segundo inválido, segundos permenecerão zerados.");
         }
 
+        // se validado, muda o valor da variavel de instancia
         this.segundo = segundo;
     }
 
